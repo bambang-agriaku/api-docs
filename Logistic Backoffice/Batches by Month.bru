@@ -1,0 +1,22 @@
+meta {
+  name: Batches by Month
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{LOGISTIC_BACKOFFICE_URL}}/api/internal/batches/by_month?month=10&year=2023
+  body: none
+  auth: none
+}
+
+query {
+  month: 10
+  year: 2023
+}
+
+headers {
+  X-Application-Name: BACKOFFICE_LOGISTIC
+  X-Platform: WEB
+  X-Agriaku-Session: {{LOGISTIC_BACKOFFICE_TOKEN}}
+}
